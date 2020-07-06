@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Tutorial</title>
+</head>
+<body>
+<h1>Javascript Tutorial</h1>
+<button onclick="buttonClick()">Simple Button</button>
+<input type="text" onkeydown="KeyDownMethod()" onkeyup="KeyUpMethodCalling(this)" id="input">
+<div id="pagecontent">
+	</div>
+<script type="text/javascript">
+	//Simple Comment
+	document.write("Hello World in Javascript");
+	/*
+		Javascript Hello World Comment
+	*/
+	console.log("Hello World in Javascript in Console");
+	//alert("Hello World Using Alert Dialog");
+	document.getElementById("pagecontent").innerHTML="New Content";
+
+	var a=10;
+	var name="Rahul";
+	var bool_data=false;
+	var float_data=10.50;
+
+	console.log(a);
+	console.log(name);
+	console.log(bool_data);
+	console.log(float_data);
+
+	var num1=10;
+	var num2=20;
+	console.log(num1+num2);
+	console.log(num1*num2);	
+	console.log(num1/num2);
+	console.log(num1-num2);
+
+	console.log(typeof(a));
+	console.log(typeof(name));
+	console.log(typeof(bool_data));
+	console.log(typeof(float_data));
+	console.log(sumofData(20,30));
+
+	
+
+
+	function sumofData(a,b){
+		return a+b;
+	}
+
+	for(var i=0;i<10;i++){
+		console.log(i);
+	}
+	var a=20;
+	while(a!=0){
+		console.log("Value of A : "+a);
+		a=a-1;
+		//a--;
+	}
+
+	var num11=50;
+	var num22=60;
+
+	if(num11>num22){
+		console.log("Num 1 is Greater");
+	}
+	else{
+		console.log("Num 2 is Greater");
+	}
+
+	var string_data="Hello World in Javascript";
+	console.log("Length is :"+string_data.length);
+	console.log(string_data.replace("World","Supercoders"))
+	console.log("Char at 10 : "+string_data.charAt(10));
+	var string1="Hello ";
+	var string2="Javascript";
+	var string3=string1+" "+string2;
+	console.log(string3);
+
+	var array_data=[10,20,30,40];
+	console.log(array_data);
+	console.log(array_data[1])
+
+	for(var key in array_data){
+		console.log(array_data[key]);
+	}
+
+	for(var i=0;i<array_data.length;i++){
+		console.log(array_data[i]);
+	}
+
+
+	var object_data={firsname:"Rahul",lastname:"Roy"};
+	console.log(object_data['firsname']);
+	console.log(object_data.lastname);
+
+	var key_list_data=[{first:"Rahul",lastname:"Roy"},{first:"AMan",lastname:"Kumar"},{first:"Vishal",lastname:"Roy"}];
+
+	for(var key in key_list_data){
+		console.log(key_list_data[key]['first']);
+	}
+
+	var newarray_from_string=string_data.split(" ");
+	console.log(newarray_from_string);
+
+	console.log(key_list_data);
+
+	function buttonClick() {
+		console.log("Button is Clicked");
+		var input=document.getElementById("input");
+		console.log("Input Value : "+input.value);
+	}
+
+	function KeyDownMethod(){
+		console.log("Keydown Press")
+	}
+
+	function KeyUpMethodCalling(event){
+		console.log(event.value);
+	}
+
+</script>
+</body>
+</html>
